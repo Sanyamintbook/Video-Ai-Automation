@@ -1,0 +1,47 @@
+# Virtual Environments and Python Cache
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Large Generated Output Media & Models
+outputs/
+outputs_v3/
+uploads/
+tmp_pytest_local/
+*.mp4
+*.wav
+*.mp3
+*.log
+*.zip
+*.pt
+*.pth
+*.onnx
+*.bin
+*.exe
+
+# IDE, Environment Secrets & Local Runtime State
+.env
+.env.*
+*.env
+.idea/
+.vscode/
+.pytest_cache/
+local_state.json
+*.tmp
+*.bak
+*.db
+*.sqlite3
+
+# Safe configuration template
+!.env.example
+
+# Local generated artifacts
+output_new/
+template_extracted/
+Ch05 Marginalised Groups and_694b/
+/dummy.png
+/test_slide.png

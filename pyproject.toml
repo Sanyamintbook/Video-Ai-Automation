@@ -1,0 +1,81 @@
+[project]
+name = "olympiad-ai-video"
+version = "0.1.0"
+description = "AI-powered Educational Content to Video Generator"
+readme = "README.md"
+requires-python = ">=3.12"
+
+authors = [
+    { name = "Your Team" }
+]
+
+dependencies = [
+    "fastapi>=0.116.0",
+    "uvicorn[standard]>=0.35.0",
+    "python-multipart>=0.0.18",
+    "pydantic>=2.11.0",
+    "pydantic-settings>=2.10.0",
+    "google-genai>=1.29.0",
+    "ollama>=0.5.1",
+    "openai>=1.50.0",
+    "pymupdf>=1.26.0",
+    "python-docx>=1.2.0",
+    "python-pptx>=1.0.2",
+    "loguru>=0.7.3",
+    "orjson>=3.11.0",
+    "httpx>=0.28.1",
+    "aiofiles>=24.1.0",
+    "tenacity>=9.1.2",
+
+    "mutagen>=1.47.0",
+    "gTTS>=2.5.4",
+    "faiss-cpu>=1.8.0",
+    "jsonschema>=4.25.0",
+    "python-dotenv>=1.1.1",
+    "streamlit>=1.40.0",
+    "kokoro-onnx>=0.3.0",
+    "soundfile>=0.12.1"
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.1",
+    "pytest-asyncio>=1.1.0",
+    "pytest-cov>=6.2.1",
+    "ruff>=0.12.8",
+    "mypy>=1.17.1",
+    "pre-commit>=4.3.0"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "I",
+    "UP",
+    "B",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+ignore_missing_imports = true
+
+[tool.coverage.run]
+branch = true
+source = ["app"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
